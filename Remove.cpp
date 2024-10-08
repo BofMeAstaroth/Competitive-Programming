@@ -38,7 +38,7 @@ void solve() {
         for(int j = 1; j < n; j++) {
             if(i + j >= n) break;
             if(i && j)
-                dp[i][j] = dp[i - 1][j - 1] - a[i] * b[n - i + 1] - a[n - i + 1] * b[i];
+                dp[i][j] = dp[i - 1][j - 1] - a[i] * b[n - j + 1] - a[n - j + 1] * b[i];
             
             if(dp[i][j] > dp[x][y]) {
                 x = i;
